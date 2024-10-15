@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketSpot</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img class="logo" src="img/logo.jpg" alt="logo">
+            <nav> 
+                <a href="index.html">Inicio</a>
+                <a href="index.html">Quienes Somos</a>
+                <a href="index.html">Productos</a>
+                <a href="index.html">Modo de Uso</a>
+            </nav>
+        </div>
+    </header>
+    <section id="contacto">
+        <h2>Realizar Pedido</h2>
+        <div class="container">
+                <form class="formulario">
+                    <fieldset>
+                        <legend>Información Personal</legend>
+                        <label for="name">Nombre 
+                            <input class="name" id="name" name='nombre' type='text' autocomplete="name"  required>
+                        </label>
+                        <label for="lastname">Apellido
+                            <input class="lastname" id="lastname" name='apellidos' type='text'  required>
+                        </label>
+                        <label for="iphone">Celular
+                        <input class="iphone" id="iphone" type="text" name="iphone"  required>
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend for="tipo">Tipo de Combo</legend>
+                        <input class="tipo" list="tipo" name="tipo" placeholder="Que combo deseas">
+                        <datalist id="tipo">
+                            <option value="combo1"></option>
+                            <option value="combo2"></option>
+                            <option value="combo3"></option>
+                            <option value="combo4"></option>
+                        </datalist>
+                    </fieldset>
+                    <fieldset>
+                        <legend for="entrega">Lugar de Entrega</legend>
+                        <input class="entrega" list="entrega" name="entrega" placeholder="Donde deseeas recibirlo">
+                        <datalist id="entrega">
+                            <option value="Tottus"></option>
+                            <option value="Plaza de Armas"></option>
+                            <option value="Maestro"></option>
+                        </datalist>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Nota adicional</legend>
+                        <label class="mensajee" for="mensaje">
+                            <textarea class="mensaje" id="mensaje" placeholder="Escribe tu mensaje"></textarea>
+                        </label>
+                    </fieldset>
+                    <label class="reglas" for="accept">Acepta los terminos y condiciones
+                        <input class="boton" type="checkbox" id="accept">
+                    </label>
+                    <button>
+                        <a type="button" onclick="sendwhatsapp();">Enviar</a>
+                    </button>
+                </form>
+            </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
